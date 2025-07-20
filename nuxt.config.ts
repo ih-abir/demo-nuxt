@@ -1,6 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { postcss } from '@tailwindcss/postcss';
 
-import { postcss } from "@tailwindcss/postcss";
+const imageProvider = process.env.IMAGE_PROVIDER || 'ipx',
+  url = process.env.WEB_URL || "";
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -17,12 +18,21 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image', 'nuxt-svgo-loader'],
 
   image: {
-    provider: 'ipx',
+    provider: imageProvider,
+
+    // Config for ipx provider
     ipx: {
       modifiers: {
         kernel: 'lanczos3',
-      }
+      },
     },
+
+    // Config for ipx provider
+    cloudflare: {
+      baseURL: url,
+    },
+
+    // Shared options
     screens: {
       xxs: 325,
       xs: 425,
@@ -32,6 +42,7 @@ export default defineNuxtConfig({
       xl: 1280,
       '2xl': 1536,
     },
+
     breakpoints: {
       sm: '640px',
       md: '768px',
@@ -39,8 +50,9 @@ export default defineNuxtConfig({
       xl: '1280px',
       '2xl': '1536px',
     },
+
     format: ['avif', 'webp', 'jpg', 'png'],
     placeholder: 'blur',
     lazySizes: true,
-  }
-})
+  },
+});
