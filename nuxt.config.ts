@@ -48,6 +48,7 @@ export default defineNuxtConfig({
     format: ['avif', 'webp', 'jpg', 'png'],
     placeholder: 'blur',
     lazySizes: true,
-    quality: 55,
+    // Conditionally add quality only for vercel
+    ...(imageProvider === 'vercel' ? { quality: 75 } : {}),
   },
 });
