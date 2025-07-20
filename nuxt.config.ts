@@ -48,6 +48,6 @@ export default defineNuxtConfig({
     format: ['avif', 'webp', 'jpg', 'png'],
     placeholder: 'blur',
     lazySizes: true,
-    quality: 50,
+    quality: 55,
   },
 });
