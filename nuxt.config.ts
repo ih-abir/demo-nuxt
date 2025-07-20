@@ -1,7 +1,6 @@
 import { postcss } from '@tailwindcss/postcss';
 
-const imageProvider = process.env.IMAGE_PROVIDER || 'ipx',
-  url = process.env.WEB_URL || "";
+const imageProvider = process.env.IMAGE_PROVIDER || 'ipx';
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -27,10 +26,6 @@ export default defineNuxtConfig({
       },
     },
 
-    // Config for ipx provider
-    cloudflare: {
-      baseURL: url,
-    },
 
     // Shared options
     screens: {
