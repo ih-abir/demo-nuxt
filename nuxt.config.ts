@@ -26,7 +26,6 @@ export default defineNuxtConfig({
       },
     },
 
-
     // Shared options
     screens: {
       xxs: 325,
@@ -49,5 +48,6 @@ export default defineNuxtConfig({
     format: ['avif', 'webp', 'jpg', 'png'],
     placeholder: 'blur',
     lazySizes: true,
+    quality: 50,
   },
 });
