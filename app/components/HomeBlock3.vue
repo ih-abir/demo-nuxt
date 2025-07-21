@@ -112,6 +112,7 @@ onMounted(() => {
                 '800:324px 860:395px lg:290px 1151:330px xl:355px'
               ].join(' ')"
               format="avif, webp"
+              loading="lazy"
             />
 
             <div class="poppins text-lg font-semibold text-dark">

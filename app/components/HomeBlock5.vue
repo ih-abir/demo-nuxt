@@ -157,6 +157,7 @@ onMounted(() => {
                 class="size-[60px] rounded-full object-cover"
                 format="avif, webp"
                 alt="avatar"
+                loading="lazy"
               />
             </div>
             <div class="flex flex-col division-gap w-full">

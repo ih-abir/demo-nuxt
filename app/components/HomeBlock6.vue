@@ -24,12 +24,15 @@ const socialLogos = [socialLogo1, socialLogo2, socialLogo3, socialLogo4, socialL
       <div
         class="w-full !max-w-[750px] flex flex-wrap justify-evenly items-center gap-[clamp(2.5rem,0.5rem+5vw,5rem)] mx-auto"
       >
-        <img
+        <Icon
           v-for="(src, i) in logos"
           :key="i"
           :src="src"
-          alt="partner logo"
-          class="size-[clamp(60px,2.75rem+2.5vw,80px)] grayscale hover:grayscale-0 opacity-40 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer"
+          :class="[
+            'size-[clamp(60px,2.75rem+2.5vw,80px)] grayscale',
+            'hover:grayscale-0 opacity-40 hover:opacity-100',
+            'transition-all duration-300 ease-in-out cursor-pointer'
+          ].join(' ')"
         />
       </div>
 
@@ -58,7 +61,6 @@ const socialLogos = [socialLogo1, socialLogo2, socialLogo3, socialLogo4, socialL
               v-for="(src, i) in socialLogos"
               :key="i"
               :src="src"
-              alt="social logo"
               :class="[
                 'size-5 grayscale hover:grayscale-0',
                 'opacity-40 hover:opacity-100 transition-all',

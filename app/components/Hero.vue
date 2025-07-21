@@ -63,7 +63,8 @@ import headerGradient3 from '/images/header-gradient3.png'
           'md:1023px lg:1279px xl:1439px 2xl:1920px'
         ].join(' ')"
         format="avif, webp"
-        priority
+        priority="true"
+        loading="eager"
       />
     </div>
 
