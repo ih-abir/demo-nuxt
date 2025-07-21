@@ -58,12 +58,10 @@ import headerGradient3 from '/images/header-gradient3.png'
         class="w-full h-full object-cover"
         :src="headerImage"
         alt="header-image"
-        :width="1920"
         :sizes="[
-          '(max-width: 325px) 325px, (max-width: 415px) 415px',
-          '(max-width: 639px) 639px, (max-width: 767px) 767px',
-          '(max-width: 1023px) 1023px, (max-width: 1440px) 1440px, 1920px'
-        ].join(', ')"
+          '324px xxs:424px xs:639px sm:767px',
+          'md:1023px lg:1279px xl:1439px 2xl:1920px'
+        ].join(' ')"
         format="avif, webp"
         priority
       />

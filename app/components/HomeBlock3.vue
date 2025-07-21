@@ -102,44 +102,16 @@ onMounted(() => {
             class="card flex flex-col gap-4"
           >
             <NuxtImg
-              class="w-full h-fit object-cover block sm:hidden"
+              class="w-full h-fit object-cover"
               :src="img"
               alt="artist image"
               width="300"
               height="200"
               :sizes="[
-                '(max-width: 325px) 235px',
-                '(max-width: 425px) 327px',
-                '(max-width: 575px) 465px',
-                '524px',
-              ].join(', ')"
+                '207px xxs:295px xs:484px sm:298px',
+                '800:324px 860:395px lg:290px 1151:330px xl:355px'
+              ].join(' ')"
               format="avif, webp"
-              loading="lazy"
-            />
-            <NuxtImg
-              class="w-full h-fit object-cover hidden sm:block lg:hidden"
-              :src="img"
-              alt="artist image"
-              width="300"
-              height="200"
-              :sizes="[
-                '(max-width: 767px) 305px',
-                '(max-width: 799px) 320px',
-                '(max-width: 859px) 394px',
-                '422px',
-              ].join(', ')"
-              format="avif, webp"
-              loading="lazy"
-            />
-            <NuxtImg
-              class="w-full h-fit object-cover hidden lg:block"
-              :src="img"
-              alt="artist image"
-              width="300"
-              height="200"
-              sizes="(max-width: 1151px) 310px, 355px"
-              format="avif, webp"
-              loading="lazy"
             />
 
             <div class="poppins text-lg font-semibold text-dark">
