@@ -1,8 +1,8 @@
 <script setup>
 import mouseIcon from '/images/mouse-icon.svg'
 import headerImage from '/images/header-image.jpg'
-import headerGradient1 from '/images/header-gradient1.png'
-import headerGradient3 from '/images/header-gradient3.png'
+import headerGradient1 from '/images/header-gradient1.avif'
+import headerGradient3 from '/images/header-gradient3.avif'
 </script>
 
 <template>
@@ -76,10 +76,11 @@ import headerGradient3 from '/images/header-gradient3.png'
       ]"
     >
       <NuxtImg
-        class="size-[100px] object-cover"
+        class="w-full h-full object-cover"
         :src="headerGradient1"
         alt="header-gradient-1"
         sizes="100px"
+        densities="x1"
         format="avif, webp"
         loading="lazy"
       />
@@ -93,10 +94,11 @@ import headerGradient3 from '/images/header-gradient3.png'
       ]"
     >
       <NuxtImg
-        class="size-[110px] object-cover"
+        class="w-full h-full object-cover"
         :src="headerGradient3"
         alt="header-gradient-3"
         sizes="110px"
+        densities="x1"
         format="avif, webp"
         loading="lazy"
       />
