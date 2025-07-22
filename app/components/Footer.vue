@@ -1,5 +1,5 @@
 <script setup>
-const brandLogo = '/images/brand-logo.png'
+const brandLogo = '/images/brand-logo.webp'
 const socialLogos = [
   { src: '/images/facebook-logo.svg' },
   { src: '/images/twitter-logo.svg' },
@@ -28,12 +28,9 @@ const footerLinks = [
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 division-gap">
         <!-- Brand Logo -->
         <div>
-          <NuxtImg
+          <img
             :src="brandLogo"
             alt="Brand Logo"
-            sizes="170px"
-            densities="x1"
-            format="avif, webp"
             class="width-[170px] h-fit object-contain"
           />
         </div>

@@ -1,3 +1,33 @@
+<script setup>
+import brandLogo from '/images/brand-logo.webp'
+import menuIcon from '/images/menu-icon.svg'
+import closeIcon from '/images/close-icon.svg'
+
+const navMenus = ["Home", "About", "Services", "Contact", "Blog", "Login"]
+const isMenuOpen = ref(false)
+
+const toggleMenu = (open) => {
+  isMenuOpen.value = open
+  document.body.classList.toggle('overflow-hidden', open)
+  document.body.classList.toggle('md:overflow-auto', open)
+}
+
+const handleScroll = () => {
+  const navbar = document.querySelector('.navbar')
+  if (navbar) {
+    navbar.classList.toggle('bg-black', window.scrollY > 0)
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>
+
 <template>
   <nav
     :class="[
@@ -16,12 +46,9 @@
           to="/"
           aria-label="home"
         >
-          <NuxtImg
+          <img
             :src="brandLogo"
             alt="Brand Logo"
-            sizes="110px md:125px lg:150px"
-            densities="x1"
-            format="avif, webp"
             pririty="high"
             loading="eager"
             :class="[
@@ -83,33 +110,3 @@
     </div>
   </nav>
 </template>
-
-<script setup>
-import brandLogo from '/images/brand-logo.png'
-import menuIcon from '/images/menu-icon.svg'
-import closeIcon from '/images/close-icon.svg'
-
-const navMenus = ["Home", "About", "Services", "Contact", "Blog", "Login"]
-const isMenuOpen = ref(false)
-
-const toggleMenu = (open) => {
-  isMenuOpen.value = open
-  document.body.classList.toggle('overflow-hidden', open)
-  document.body.classList.toggle('md:overflow-auto', open)
-}
-
-const handleScroll = () => {
-  const navbar = document.querySelector('.navbar')
-  if (navbar) {
-    navbar.classList.toggle('bg-black', window.scrollY > 0)
-  }
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
-</script>
