@@ -21,7 +21,7 @@
             alt="Brand Logo"
             sizes="110px md:125px lg:150px"
             densities="x1"
-            format="avif, webp, png"
+            format="avif, webp"
             pririty="high"
             loading="eager"
             :class="[

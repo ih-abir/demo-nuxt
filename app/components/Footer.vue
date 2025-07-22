@@ -33,7 +33,7 @@ const footerLinks = [
             alt="Brand Logo"
             sizes="170px"
             densities="x1"
-            format="avif, webp, png"
+            format="avif, webp"
             class="width-[170px] h-fit object-contain"
           />
         </div>
