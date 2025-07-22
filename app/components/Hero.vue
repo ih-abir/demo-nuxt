@@ -76,13 +76,10 @@ import headerGradient3 from '/images/header-gradient3.png'
       ]"
     >
       <NuxtImg
-        class="w-full h-full object-cover"
+        class="size-[100px] object-cover"
         :src="headerGradient1"
         alt="header-gradient-1"
-        width="100"
-        height="100"
         sizes="100px"
-        densities="x1"
         format="avif, webp"
         loading="lazy"
       />
@@ -96,13 +93,10 @@ import headerGradient3 from '/images/header-gradient3.png'
       ]"
     >
       <NuxtImg
-        class="w-full h-full object-cover"
+        class="size-[110px] object-cover"
         :src="headerGradient3"
         alt="header-gradient-3"
-        width="110"
-        height="110"
         sizes="110px"
-        densities="x1"
         format="avif, webp"
         loading="lazy"
       />
