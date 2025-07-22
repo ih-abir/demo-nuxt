@@ -81,8 +81,10 @@ import headerGradient3 from '/images/header-gradient3.png'
         alt="header-gradient-1"
         width="100"
         height="100"
+        sizes="100px"
+        densities="x1"
+        format="avif, webp"
         loading="lazy"
-        format="avif, webp, png"
       />
     </div>
 
@@ -99,8 +101,10 @@ import headerGradient3 from '/images/header-gradient3.png'
         alt="header-gradient-3"
         width="110"
         height="110"
+        sizes="110px"
+        densities="x1"
+        format="avif, webp"
         loading="lazy"
-        format="avif, webp, png"
       />
     </div>
   </div>
