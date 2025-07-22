@@ -1,12 +1,39 @@
+<script setup>
+const brandLogo = '/images/brand-logo.png'
+const socialLogos = [
+  { src: '/images/facebook-logo.svg' },
+  { src: '/images/twitter-logo.svg' },
+  { src: '/images/instagram-logo.svg' },
+  { src: '/images/linkedin-logo.svg' },
+  { src: '/images/pinterest-logo.svg' }
+]
+
+const footerLinks = [
+  "Music Distribution",
+  "Publishing Administration",
+  "Rights Management",
+  "Promotion",
+  "Label Services",
+  "Blog",
+  "Testimonials",
+  "Careers",
+  "FAQ",
+  "Contact"
+]
+</script>
+
 <template>
   <footer class="py-[30px] bg-black">
     <div class="wrapper text-white pt-[60px] pb-[30px]">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 division-gap">
         <!-- Brand Logo -->
         <div>
-          <img
+          <NuxtImg
             :src="brandLogo"
             alt="Brand Logo"
+            sizes="170px"
+            densities="x1"
+            format="avif, webp, png"
             class="width-[170px] h-fit object-contain"
           />
         </div>
@@ -60,27 +87,3 @@
     </div>
   </footer>
 </template>
-
-<script setup>
-const brandLogo = '/images/brand-logo.png'
-const socialLogos = [
-  { src: '/images/facebook-logo.svg' },
-  { src: '/images/twitter-logo.svg' },
-  { src: '/images/instagram-logo.svg' },
-  { src: '/images/linkedin-logo.svg' },
-  { src: '/images/pinterest-logo.svg' }
-]
-
-const footerLinks = [
-  "Music Distribution",
-  "Publishing Administration",
-  "Rights Management",
-  "Promotion",
-  "Label Services",
-  "Blog",
-  "Testimonials",
-  "Careers",
-  "FAQ",
-  "Contact"
-]
-</script>

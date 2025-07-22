@@ -16,10 +16,18 @@
           to="/"
           aria-label="home"
         >
-          <img
+          <NuxtImg
             :src="brandLogo"
             alt="Brand Logo"
-            class="w-[clamp(110px,4.018rem+5.952vw,150px)] h-fit object-contain"
+            sizes="110px md:125px lg:150px"
+            densities="x1"
+            format="avif, webp, png"
+            pririty="high"
+            loading="eager"
+            :class="[
+              'h-fit object-contain',
+              'w-[clamp(110px,4.018rem+5.952vw,150px)]'
+            ].join(' ')"
           />
         </NuxtLink>
 
